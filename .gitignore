@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build
+.next/
+dist/
+build/
+target/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Uploads
+uploads/*
+!uploads/.gitkeep
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.cache/
+
+# Python
+*.egg-info/
+.eggs/
+dist/
+*.egg
+
+# Database
+*.db
+*.sqlite3
+
+# Railway
+.railway/
