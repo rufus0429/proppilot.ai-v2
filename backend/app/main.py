@@ -33,7 +33,11 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origins,
+    allow_origins=[
+        "http://localhost:3000",
+        "https://proppilot-ai-v2.vercel.app",
+    ],
+    allow_origin_regex=r"https://proppilot-ai-v2-.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
