@@ -55,11 +55,19 @@ class ApiClient {
     console.log("API URL:", `${API_BASE_URL}${endpoint}`);
 console.log("Body:", options.body);
 
+console.log("URL:", `${API_BASE_URL}${endpoint}`);
+console.log("BODY:", options.body);
+
 const response = await fetch(`${API_BASE_URL}${endpoint}`, {
   ...options,
   headers,
 });
 
+console.log("STATUS:", response.status);
+
+if (!response.ok) {
+  console.log("RESPONSE:", await response.text());
+}
     if (!response.ok) {
       const error = await response.json().catch(() => ({ detail: "Request failed" }));
       throw new Error(error.detail || `HTTP ${response.status}`);
