@@ -52,10 +52,13 @@ class ApiClient {
       headers["Authorization"] = `Bearer ${this.token}`;
     }
 
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
-      ...options,
-      headers,
-    });
+    console.log("API URL:", `${API_BASE_URL}${endpoint}`);
+console.log("Body:", options.body);
+
+const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+  ...options,
+  headers,
+});
 
     if (!response.ok) {
       const error = await response.json().catch(() => ({ detail: "Request failed" }));
