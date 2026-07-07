@@ -45,8 +45,13 @@ class Settings(BaseSettings):
     whatsapp_access_token: str = ""
     whatsapp_verify_token: str = ""
 
-    frontend_url: str = "http://localhost:3000"
-    cors_origins: List[str] = ["http://localhost:3000", "http://localhost:3001"]
+    frontend_url: str = "https://proppilot-ai-v2.vercel.app"
+    cors_origins: List[str] = [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "https://proppilot-ai-v2.vercel.app",
+    "https://proppilot-ai-v2-qcvv2ccm4-team-vison-x.vercel.app",
+]
 
     celery_broker_url: str = "redis://localhost:6379/0"
     celery_result_backend: str = "redis://localhost:6379/0"
