@@ -100,6 +100,13 @@ proppilot-ai/
 
 
 ## 🚦 Getting Started
+## Demo Credentials
+
+Frontend:
+https://proppilot-ai-v2.vercel.app
+
+Email: admin@proppilot.ai
+Password: admin123
 
 ### Prerequisites
 
